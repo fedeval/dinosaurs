@@ -11,7 +11,9 @@ function Dinosaur(properties) {
 }
 
 // Create Dino Objects
-
+// Fetch JSON data and store it into a constant as an array of Dinosaur objects
+const json = require('./dino.json');
+const dinosaurs = json.Dinos.map(dinosaur => new Dinosaur(dinosaur));
 
 // Create Human Object
 
