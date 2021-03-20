@@ -2,8 +2,8 @@
     "Dinos": [
         {
             "species": "Triceratops",
-            "weight": 13000,
-            "height": 114,
+            "weight": 5900,
+            "height": 290,
             "diet": "herbavor",
             "where": "North America",
             "when": "Late Cretaceous",
@@ -11,8 +11,8 @@
         },
         {
             "species": "Tyrannosaurus Rex",
-            "weight": 11905,
-            "height": 144,
+            "weight": 5400,
+            "height": 365,
             "diet": "carnivor",
             "where": "North America",
             "when": "Late Cretaceous",
@@ -20,8 +20,8 @@
         },
         {
             "species": "Anklyosaurus",
-            "weight": 10500,
-            "height": 55,
+            "weight": 4700,
+            "height": 140,
             "diet": "herbavor",
             "where": "North America",
             "when": "Late Cretaceous",
@@ -29,8 +29,8 @@
         },
         {
             "species": "Brachiosaurus",
-            "weight": 70000,
-            "height": "372",
+            "weight": 31700,
+            "height": 944,
             "diet": "herbavor",
             "where": "North America",
             "when": "Late Jurasic",
@@ -38,8 +38,8 @@
         },
         {
             "species": "Stegosaurus",
-            "weight": 11600,
-            "height": 79,
+            "weight": 5200,
+            "height": 200,
             "diet": "herbavor",
             "where": "North America, Europe, Asia",
             "when": "Late Jurasic to Early Cretaceous",
@@ -47,8 +47,8 @@
         },
         {
             "species": "Elasmosaurus",
-            "weight": 16000,
-            "height": 59,
+            "weight": 7300,
+            "height": 150,
             "diet": "carnivor",
             "where": "North America",
             "when": "Late Cretaceous",
@@ -56,8 +56,8 @@
         },
         {
             "species": "Pteranodon",
-            "weight": 44,
-            "height": 20,
+            "weight": 20,
+            "height": 50,
             "diet": "carnivor",
             "where": "North America",
             "when": "Late Cretaceous",
@@ -65,8 +65,8 @@
         },
         {
             "species": "Pigeon",
-            "weight": 0.5,
-            "height": 9,
+            "weight": 0.2,
+            "height": 23,
             "diet": "herbavor",
             "where": "World Wide",
             "when": "Holocene",
