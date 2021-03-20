@@ -16,6 +16,12 @@ const json = require('./dino.json');
 const dinosaurs = json.Dinos.map(dinosaur => new Dinosaur(dinosaur));
 
 // Create Human Object
+function Human(name, height, weight, diet) {
+    this.name = name;
+    this.height = height;
+    this.weight = weight;
+    this.diet = diet;
+}
 
 // Use IIFE to get human data from form
 
