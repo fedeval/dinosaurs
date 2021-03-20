@@ -15,15 +15,23 @@ function Dinosaur(properties) {
 const json = require('./dino.json');
 const dinosaurs = json.Dinos.map(dinosaur => new Dinosaur(dinosaur));
 
-// Create Human Object
+// Create Human Object and initialise and empty one
 function Human(name, height, weight, diet) {
     this.name = name;
     this.height = height;
     this.weight = weight;
     this.diet = diet;
-}
+};
 
-// Use IIFE to get human data from form
+const user = new Human()
+
+// Use IIFE to get human data from form and edit properties of empty Human object
+(function (human) {
+    human.name = document.getElementById('name').value;
+    human.height = document.getElementById('height').value;
+    human.weight = document.getElementById('weight').value;
+    human.diet = document.getElementById('diet').value;
+})(user);
 
 
 // Create Dino Compare Method 1
