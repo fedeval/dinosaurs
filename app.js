@@ -87,14 +87,7 @@ function Dinosaur(properties) {
     this.fact = properties.fact;
 }
 
-// Create Dino Objects
-// Fetch JSON data and store it into a constant as an array of Dinosaur objects
-// let jsonData = require('./dino.json');
-// url = '/dino.json'
-// let request = new XMLHttpRequest();
-// request.open('GET', url);
-// request.responseType = 'json';
-// request.send();
+// Create Dino Objects using Json data
 let dinosaurs = jsonData.Dinos.map(dinosaur => new Dinosaur(dinosaur));
 
 // Create Human Object and initialise and empty one
@@ -116,15 +109,15 @@ let user = new Human();
 })(user);
 
 // Create Dino Compare Method 1
-let compareHeight = function(dinosaur, human) {
-    let heightDifference = dinosaur.height - human.height;
+let Dinosaur.compareHeight = function(human) {
+    let heightDifference = this.height - human.height;
     let message;
     if (heightDifference > 0) {
-        message = `You are ${heightDifference} cm shorter than the ${dinosaur.species}`;
+        message = `You are ${heightDifference} cm shorter than the ${this.species}`;
     } else if (heightDifference === 0) {
-        message = `You are the same exact height as the ${dinosaur.species}!`;
+        message = `You are the same exact height as the ${this.species}!`;
     } else {
-        message = `You are ${heightDifference * -1} taller than the ${dinosaur.species}`;
+        message = `You are ${heightDifference * -1} taller than the ${this.species}`;
     }
     return message;
 }
@@ -154,6 +147,7 @@ let compareDiet = function(dinosaur, human) {
     return message;
 }
 
+// 
 
 // Generate Tiles for each Dino in Array
 
