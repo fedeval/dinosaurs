@@ -5,7 +5,7 @@ const jsonData = {
             "species": "Triceratops",
             "weight": 5900,
             "height": 290,
-            "diet": "herbavor",
+            "diet": "herbivore",
             "where": "North America",
             "when": "Late Cretaceous",
             "fact": "First discovered in 1889 by Othniel Charles Marsh"
@@ -14,7 +14,7 @@ const jsonData = {
             "species": "Tyrannosaurus Rex",
             "weight": 5400,
             "height": 365,
-            "diet": "carnivor",
+            "diet": "carnivore",
             "where": "North America",
             "when": "Late Cretaceous",
             "fact": "The largest known skull measures in at 5 feet long."
@@ -23,7 +23,7 @@ const jsonData = {
             "species": "Anklyosaurus",
             "weight": 4700,
             "height": 140,
-            "diet": "herbavor",
+            "diet": "herbivore",
             "where": "North America",
             "when": "Late Cretaceous",
             "fact": "Anklyosaurus survived for approximately 135 million years."
@@ -32,7 +32,7 @@ const jsonData = {
             "species": "Brachiosaurus",
             "weight": 31700,
             "height": 944,
-            "diet": "herbavor",
+            "diet": "herbivore",
             "where": "North America",
             "when": "Late Jurasic",
             "fact": "An asteroid was named 9954 Brachiosaurus in 1991."
@@ -41,7 +41,7 @@ const jsonData = {
             "species": "Stegosaurus",
             "weight": 5200,
             "height": 200,
-            "diet": "herbavor",
+            "diet": "herbivore",
             "where": "North America, Europe, Asia",
             "when": "Late Jurasic to Early Cretaceous",
             "fact": "The Stegosaurus had between 17 and 22 seperate places and flat spines."
@@ -50,7 +50,7 @@ const jsonData = {
             "species": "Elasmosaurus",
             "weight": 7300,
             "height": 150,
-            "diet": "carnivor",
+            "diet": "carnivore",
             "where": "North America",
             "when": "Late Cretaceous",
             "fact": "Elasmosaurus was a marine reptile first discovered in Kansas."
@@ -59,7 +59,7 @@ const jsonData = {
             "species": "Pteranodon",
             "weight": 20,
             "height": 50,
-            "diet": "carnivor",
+            "diet": "carnivore",
             "where": "North America",
             "when": "Late Cretaceous",
             "fact": "Actually a flying reptile, the Pteranodon is not a dinosaur."
@@ -68,7 +68,7 @@ const jsonData = {
             "species": "Pigeon",
             "weight": 0.2,
             "height": 23,
-            "diet": "herbavor",
+            "diet": "herbivore",
             "where": "World Wide",
             "when": "Holocene",
             "fact": "All birds are living dinosaurs."
