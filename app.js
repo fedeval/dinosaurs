@@ -12,8 +12,8 @@ function Dinosaur(properties) {
 
 // Create Dino Objects
 // Fetch JSON data and store it into a constant as an array of Dinosaur objects
-const json = require('./dino.json');
-const dinosaurs = json.Dinos.map(dinosaur => new Dinosaur(dinosaur));
+let jsonData = require('./dino.json');
+let dinosaurs = jsonData.Dinos.map(dinosaur => new Dinosaur(dinosaur));
 
 // Create Human Object and initialise and empty one
 function Human(name, height, weight, diet) {
@@ -23,7 +23,7 @@ function Human(name, height, weight, diet) {
     this.diet = diet;
 };
 
-const user = new Human()
+let user = new Human();
 
 // Use IIFE to get human data from form and edit properties of empty Human object
 (function (human) {
@@ -35,15 +35,26 @@ const user = new Human()
 
 
 // Create Dino Compare Method 1
-// NOTE: Weight in JSON file is in lbs, height in inches. 
+let compareHeight = function(dinosaur, human) {
+    let heightDifference = dinosaur.height - human.height;
+    let message;
+    if (heightDifference > 0) {
+        message = `You are ${heightDifference} cm shorter than the ${dinosaur.species}`;
+    } else if (heightDifference === 0) {
+        message = `You are the same exact height as the ${dinosaur.species}!`;
+    } else {
+        message = `You are ${heightDifference * -1} taller than the ${dinosaur.species}`;
+    }
+    return message;
+}
 
 
 // Create Dino Compare Method 2
-// NOTE: Weight in JSON file is in lbs, height in inches.
+
 
 
 // Create Dino Compare Method 3
-// NOTE: Weight in JSON file is in lbs, height in inches.
+
 
 
 // Generate Tiles for each Dino in Array
