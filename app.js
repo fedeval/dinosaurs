@@ -93,7 +93,7 @@ function Human(name, height, weight, diet) {
     this.height = height;
     this.weight = weight;
     this.diet = diet;
-};
+}
 
 // Dino method to compare height with human
 Dinosaur.prototype.compareHeight = (human) => {
@@ -126,7 +126,7 @@ Dinosaur.prototype.compareWeight = (human) => {
 // Dino method to compare diet with human
 Dinosaur.prototype.compareDiet = (human) => {
     let message;
-    if (this.diet === height.diet) {
+    if (this.diet === human.diet) {
         message = `Both you and the ${this.species} are ${this.diet}s`;
     } else {
         message = `While you are a ${human.diet} the ${this.species} was a ${this.diet}`;
@@ -142,7 +142,7 @@ function DinoFacts(dinosaur, human) {
     this.timeFact = `The ${dinosaur.species} lived during the ${dinosaur.when} era.`;
     this.locationFact = `The ${dinosaur.species} could be found in ${dinosaur.where}`;
     this.generalFact = dinosaur.fact;
-};
+}
 
 // Function to randomly select a fact
 const randomFact = (facts) => {
@@ -180,7 +180,7 @@ const generateAndAppendTiles = (dinosaurs, human) => {
 
 // Remove form from screen
 const removeForm = () => {
-    form = document.getElementById('dino-compare');
+    const form = document.getElementById('dino-compare');
     form.remove();
 }
 
