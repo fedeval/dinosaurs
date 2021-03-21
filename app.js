@@ -18,8 +18,8 @@ const dinosaurs = json.Dinos.map(dinosaur => new Dinosaur(dinosaur));
 // Create Human Object and initialise and empty one
 function Human(name, height, weight, diet) {
     this.name = name;
-    this.height = height;
-    this.weight = weight;
+    this.height = parseInt(height, 10);
+    this.weight = parseInt(weight, 10);
     this.diet = diet;
 };
 
