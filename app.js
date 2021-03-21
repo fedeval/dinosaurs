@@ -87,26 +87,13 @@ function Dinosaur(properties) {
     this.fact = properties.fact;
 }
 
-// Create Dino Objects using Json data
-let dinosaurs = jsonData.Dinos.map(dinosaur => new Dinosaur(dinosaur));
-
-// Create Human Object and initialise and empty one
+// Create Human Object
 function Human(name, height, weight, diet) {
     this.name = name;
     this.height = height;
     this.weight = weight;
     this.diet = diet;
 };
-
-let user = new Human();
-
-// Use IIFE to get human data from form and edit properties of empty Human object
-(function (human) {
-    human.name = document.getElementById('name').value;
-    human.height = parseInt(document.getElementById('height').value, 10);
-    human.weight = parseInt(document.getElementById('weight').value, 10);
-    human.diet = document.getElementById('diet').value.toLowerCase();
-})(user);
 
 // Create Dino Compare Method 1
 Dinosaur.prototype.compareHeight = function(human) {
@@ -153,7 +140,7 @@ function DinoFacts(dinosaur, human) {
     this.heightFact = dinosaur.compareHeight(human);
     this.weightFact = dinosaur.compareWeight(human);
     this.dietFact = dinosaur.compareDiet(human);
-    this.timeFact = `The ${dinosaur.species} live during the ${dinosaur.when} era.`;
+    this.timeFact = `The ${dinosaur.species} lived during the ${dinosaur.when} era.`;
     this.locationFact = `The ${dinosaur.species} could be found in ${dinosaur.where}`;
     this.generalFact = dinosaur.fact;
 };
@@ -199,3 +186,19 @@ const removeForm = () => {
 }
 
 // On button click, prepare and display infographic
+const compareButton = document.getElementById('btn');
+compareButton.addEventListener('click', function(){
+    // Create Dino Objects using Json data
+    let dinosaurs = jsonData.Dinos.map(dinosaur => new Dinosaur(dinosaur));
+    // Initialise empty human object for the user
+    let user = new Human();
+    // Use IIFE to get human data from form and edit properties of empty Human object
+    (function (human) {
+        human.name = document.getElementById('name').value;
+        human.height = parseInt(document.getElementById('height').value, 10);
+        human.weight = parseInt(document.getElementById('weight').value, 10);
+        human.diet = document.getElementById('diet').value.toLowerCase();
+    })(user);
+    generateAndAppendTiles(dinosaurs, user);
+    removeForm();
+})
