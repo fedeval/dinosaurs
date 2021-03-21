@@ -105,7 +105,7 @@ let user = new Human();
     human.name = document.getElementById('name').value;
     human.height = parseInt(document.getElementById('height').value, 10);
     human.weight = parseInt(document.getElementById('weight').value, 10);
-    human.diet = document.getElementById('diet').value;
+    human.diet = document.getElementById('diet').value.toLowerCase();
 })(user);
 
 // Create Dino Compare Method 1
@@ -156,19 +156,46 @@ function DinoFacts(dinosaur, human) {
     this.timeFact = `The ${dinosaur.species} live during the ${dinosaur.when} era.`;
     this.locationFact = `The ${dinosaur.species} could be found in ${dinosaur.where}`;
     this.generalFact = dinosaur.fact;
-}
+};
 
 // Function to randomly select a fact
 const randomFact = function (facts) {
     const factNames = Object.keys(facts);
-    return fact[factNames[ factNames.length * Math.random() << 0]];
+    return facts[factNames[ factNames.length * Math.random() << 0]];
 };
 
 // Generate Tiles for each Dino in Array
-
-    // Add tiles to DOM
+const generateAndAppendTiles = function(dinosaurs, human) {
+    let grid = document.getElementById('grid');
+    dinosaurs.forEach(function(dinosaur, index) {
+        let fact = dinosaur.species === 'Pigeon' ? dinosaur.fact : randomFact(new DinoFacts(dinosaur, human));
+        let tile = document.createElement('div');
+        tile.className = 'grid-item';
+        tile.innerHTML = `
+            <h3>${dinosaur.species}</h3>
+            <img src="images/${dinosaur.species.toLowerCase()}.png" alt="${dinosaur.species}">
+            <p>${fact}</p>
+        `;
+        // Add tile to DOM
+        if (index === 4) {
+            let humanTile = document.createElement('div');
+            humanTile.className = 'grid-item';
+            humanTile.innerHTML = `
+                <h3>${human.name}</h3>
+                <img src="images/human.png" alt="${human.name}">
+            `;
+            grid.appendChild(humanTile);
+            grid.appendChild(tile);
+        } else {
+            grid.appendChild(tile);
+        }
+    })
+}
 
 // Remove form from screen
-
+const removeForm = () => {
+    form = document.getElementById('dino-compare');
+    form.remove();
+}
 
 // On button click, prepare and display infographic
