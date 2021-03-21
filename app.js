@@ -1,3 +1,80 @@
+// Dino data
+const jsonData = {
+    "Dinos": [
+        {
+            "species": "Triceratops",
+            "weight": 5900,
+            "height": 290,
+            "diet": "herbavor",
+            "where": "North America",
+            "when": "Late Cretaceous",
+            "fact": "First discovered in 1889 by Othniel Charles Marsh"
+        },
+        {
+            "species": "Tyrannosaurus Rex",
+            "weight": 5400,
+            "height": 365,
+            "diet": "carnivor",
+            "where": "North America",
+            "when": "Late Cretaceous",
+            "fact": "The largest known skull measures in at 5 feet long."
+        },
+        {
+            "species": "Anklyosaurus",
+            "weight": 4700,
+            "height": 140,
+            "diet": "herbavor",
+            "where": "North America",
+            "when": "Late Cretaceous",
+            "fact": "Anklyosaurus survived for approximately 135 million years."
+        },
+        {
+            "species": "Brachiosaurus",
+            "weight": 31700,
+            "height": 944,
+            "diet": "herbavor",
+            "where": "North America",
+            "when": "Late Jurasic",
+            "fact": "An asteroid was named 9954 Brachiosaurus in 1991."
+        },
+        {
+            "species": "Stegosaurus",
+            "weight": 5200,
+            "height": 200,
+            "diet": "herbavor",
+            "where": "North America, Europe, Asia",
+            "when": "Late Jurasic to Early Cretaceous",
+            "fact": "The Stegosaurus had between 17 and 22 seperate places and flat spines."
+        },
+        {
+            "species": "Elasmosaurus",
+            "weight": 7300,
+            "height": 150,
+            "diet": "carnivor",
+            "where": "North America",
+            "when": "Late Cretaceous",
+            "fact": "Elasmosaurus was a marine reptile first discovered in Kansas."
+        },
+        {
+            "species": "Pteranodon",
+            "weight": 20,
+            "height": 50,
+            "diet": "carnivor",
+            "where": "North America",
+            "when": "Late Cretaceous",
+            "fact": "Actually a flying reptile, the Pteranodon is not a dinosaur."
+        },
+        {
+            "species": "Pigeon",
+            "weight": 0.2,
+            "height": 23,
+            "diet": "herbavor",
+            "where": "World Wide",
+            "when": "Holocene",
+            "fact": "All birds are living dinosaurs."
+        }
+    ]
+}
 
 // Create Dino Constructor
 function Dinosaur(properties) {
@@ -12,7 +89,12 @@ function Dinosaur(properties) {
 
 // Create Dino Objects
 // Fetch JSON data and store it into a constant as an array of Dinosaur objects
-let jsonData = require('./dino.json');
+// let jsonData = require('./dino.json');
+// url = '/dino.json'
+// let request = new XMLHttpRequest();
+// request.open('GET', url);
+// request.responseType = 'json';
+// request.send();
 let dinosaurs = jsonData.Dinos.map(dinosaur => new Dinosaur(dinosaur));
 
 // Create Human Object and initialise and empty one
