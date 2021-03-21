@@ -123,26 +123,26 @@ Dinosaur.prototype.compareHeight = function(human) {
 }
 
 // Create Dino Compare Method 2
-let compareWeight = function(dinosaur, human) {
-    let weightDifference = dinosaur.weight - human.weight;
+Dinosaur.prototype.compareWeight = function(human) {
+    let weightDifference = this.weight - human.weight;
     let message;
     if (weightDifference > 0) {
-        message = `You are ${weightDifference} kg lighter than the ${dinosaur.species}`;
+        message = `You are ${weightDifference} kg lighter than the ${this.species}`;
     } else if (weightDifference === 0) {
-        message = `You are the same exact weight as the ${dinosaur.species}!`;
+        message = `You are the same exact weight as the ${this.species}!`;
     } else {
-        message = `You are ${weightDifference * -1} heavier than the ${dinosaur.species}`;
+        message = `You are ${weightDifference * -1} heavier than the ${this.species}`;
     }
     return message;
 }
 
 // Create Dino Compare Method 3
-let compareDiet = function(dinosaur, human) {
+Dinosaur.prototype.compareDiet = function(human) {
     let message;
-    if (dinosaur.diet === height.diet) {
-        message = `Both you and the ${dinosaur.species} are ${dinosaur.diet}s`;
+    if (this.diet === height.diet) {
+        message = `Both you and the ${this.species} are ${this.diet}s`;
     } else {
-        message = `While you are a ${human.diet} the ${dinosaur.species} was a ${dinosaur.diet}`;
+        message = `While you are a ${human.diet} the ${this.species} was a ${this.diet}`;
     }
     return message;
 }
