@@ -96,7 +96,7 @@ function Human(name, height, weight, diet) {
 }
 
 // Dino method to compare height with human
-Dinosaur.prototype.compareHeight = (human) => {
+Dinosaur.prototype.compareHeight = function(human) {
     let heightDifference = this.height - human.height;
     let message;
     if (heightDifference > 0) {
@@ -110,7 +110,7 @@ Dinosaur.prototype.compareHeight = (human) => {
 }
 
 // Dino method to compare weight with human
-Dinosaur.prototype.compareWeight = (human) => {
+Dinosaur.prototype.compareWeight = function(human) {
     let weightDifference = this.weight - human.weight;
     let message;
     if (weightDifference > 0) {
@@ -124,7 +124,7 @@ Dinosaur.prototype.compareWeight = (human) => {
 }
 
 // Dino method to compare diet with human
-Dinosaur.prototype.compareDiet = (human) => {
+Dinosaur.prototype.compareDiet = function(human) {
     let message;
     if (this.diet === human.diet) {
         message = `Both you and the ${this.species} are ${this.diet}s`;
@@ -153,7 +153,7 @@ const randomFact = (facts) => {
 // Generate Tiles for each Dino in Array
 const generateAndAppendTiles = (dinosaurs, human) => {
     let grid = document.getElementById('grid');
-    dinosaurs.forEach(function(dinosaur, index) {
+    dinosaurs.forEach((dinosaur, index) => {
         let fact = dinosaur.species === 'Pigeon' ? dinosaur.fact : randomFact(new DinoFacts(dinosaur, human));
         let tile = document.createElement('div');
         tile.className = 'grid-item';
