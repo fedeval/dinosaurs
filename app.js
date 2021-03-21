@@ -109,7 +109,7 @@ let user = new Human();
 })(user);
 
 // Create Dino Compare Method 1
-let Dinosaur.compareHeight = function(human) {
+Dinosaur.compareHeight = function(human) {
     let heightDifference = this.height - human.height;
     let message;
     if (heightDifference > 0) {
