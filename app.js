@@ -96,7 +96,7 @@ function Human(name, height, weight, diet) {
 };
 
 // Create Dino Compare Method 1
-Dinosaur.prototype.compareHeight = function(human) {
+Dinosaur.prototype.compareHeight = (human) => {
     let heightDifference = this.height - human.height;
     let message;
     if (heightDifference > 0) {
@@ -110,7 +110,7 @@ Dinosaur.prototype.compareHeight = function(human) {
 }
 
 // Create Dino Compare Method 2
-Dinosaur.prototype.compareWeight = function(human) {
+Dinosaur.prototype.compareWeight = (human) => {
     let weightDifference = this.weight - human.weight;
     let message;
     if (weightDifference > 0) {
@@ -124,7 +124,7 @@ Dinosaur.prototype.compareWeight = function(human) {
 }
 
 // Create Dino Compare Method 3
-Dinosaur.prototype.compareDiet = function(human) {
+Dinosaur.prototype.compareDiet = (human) => {
     let message;
     if (this.diet === height.diet) {
         message = `Both you and the ${this.species} are ${this.diet}s`;
@@ -146,13 +146,13 @@ function DinoFacts(dinosaur, human) {
 };
 
 // Function to randomly select a fact
-const randomFact = function (facts) {
+const randomFact = (facts) => {
     const factNames = Object.keys(facts);
     return facts[factNames[ factNames.length * Math.random() << 0]];
 };
 
 // Generate Tiles for each Dino in Array
-const generateAndAppendTiles = function(dinosaurs, human) {
+const generateAndAppendTiles = (dinosaurs, human) => {
     let grid = document.getElementById('grid');
     dinosaurs.forEach(function(dinosaur, index) {
         let fact = dinosaur.species === 'Pigeon' ? dinosaur.fact : randomFact(new DinoFacts(dinosaur, human));
@@ -187,13 +187,13 @@ const removeForm = () => {
 
 // On button click, prepare and display infographic
 const compareButton = document.getElementById('btn');
-compareButton.addEventListener('click', function(){
+compareButton.addEventListener('click', () => {
     // Create Dino Objects using Json data
     let dinosaurs = jsonData.Dinos.map(dinosaur => new Dinosaur(dinosaur));
     // Initialise empty human object for the user
     let user = new Human();
     // Use IIFE to get human data from form and edit properties of empty Human object
-    (function (human) {
+    ((human) => {
         human.name = document.getElementById('name').value;
         human.height = parseInt(document.getElementById('height').value, 10);
         human.weight = parseInt(document.getElementById('weight').value, 10);
