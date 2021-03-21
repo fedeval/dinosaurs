@@ -132,6 +132,18 @@ let compareHeight = function(dinosaur, human) {
 
 
 // Create Dino Compare Method 2
+let compareWeight = function(dinosaur, human) {
+    let weightDifference = dinosaur.weight - human.weight;
+    let message;
+    if (weightDifference > 0) {
+        message = `You are ${weightDifference} kg lighter than the ${dinosaur.species}`;
+    } else if (weightDifference === 0) {
+        message = `You are the same exact weight as the ${dinosaur.species}!`;
+    } else {
+        message = `You are ${weightDifference * -1} heavier than the ${dinosaur.species}`;
+    }
+    return message;
+}
 
 
 
