@@ -157,6 +157,13 @@ function DinoFacts(dinosaur, human) {
     this.locationFact = `The ${dinosaur.species} could be found in ${dinosaur.where}`;
     this.generalFact = dinosaur.fact;
 }
+
+// Function to randomly select a fact
+const randomFact = function (facts) {
+    const factNames = Object.keys(facts);
+    return fact[factNames[ factNames.length * Math.random() << 0]];
+};
+
 // Generate Tiles for each Dino in Array
 
     // Add tiles to DOM
