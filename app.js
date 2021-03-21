@@ -76,7 +76,7 @@ const jsonData = {
     ]
 }
 
-// Create Dino Constructor
+// Dino Constructor 
 function Dinosaur(properties) {
     this.species = properties.species;
     this.weight = properties.weight;
@@ -87,7 +87,7 @@ function Dinosaur(properties) {
     this.fact = properties.fact;
 }
 
-// Create Human Object
+// Human constructor
 function Human(name, height, weight, diet) {
     this.name = name;
     this.height = height;
@@ -95,7 +95,7 @@ function Human(name, height, weight, diet) {
     this.diet = diet;
 };
 
-// Create Dino Compare Method 1
+// Dino method to compare height with human
 Dinosaur.prototype.compareHeight = (human) => {
     let heightDifference = this.height - human.height;
     let message;
@@ -109,7 +109,7 @@ Dinosaur.prototype.compareHeight = (human) => {
     return message;
 }
 
-// Create Dino Compare Method 2
+// Dino method to compare weight with human
 Dinosaur.prototype.compareWeight = (human) => {
     let weightDifference = this.weight - human.weight;
     let message;
@@ -123,7 +123,7 @@ Dinosaur.prototype.compareWeight = (human) => {
     return message;
 }
 
-// Create Dino Compare Method 3
+// Dino method to compare diet with human
 Dinosaur.prototype.compareDiet = (human) => {
     let message;
     if (this.diet === height.diet) {
@@ -134,7 +134,6 @@ Dinosaur.prototype.compareDiet = (human) => {
     return message;
 }
 
-// Create an array of objects containing six facts for each dinosaur
 // DinoFacts constructor
 function DinoFacts(dinosaur, human) {
     this.heightFact = dinosaur.compareHeight(human);
@@ -163,7 +162,7 @@ const generateAndAppendTiles = (dinosaurs, human) => {
             <img src="images/${dinosaur.species.toLowerCase()}.png" alt="${dinosaur.species}">
             <p>${fact}</p>
         `;
-        // Add tile to DOM
+        // Add tile to DOM within the grid element
         if (index === 4) {
             let humanTile = document.createElement('div');
             humanTile.className = 'grid-item';
