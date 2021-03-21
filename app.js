@@ -147,8 +147,16 @@ Dinosaur.prototype.compareDiet = function(human) {
     return message;
 }
 
-// 
-
+// Create an array of objects containing six facts for each dinosaur
+// DinoFacts constructor
+function DinoFacts(dinosaur, human) {
+    this.heightFact = dinosaur.compareHeight(human);
+    this.weightFact = dinosaur.compareWeight(human);
+    this.dietFact = dinosaur.compareDiet(human);
+    this.timeFact = `The ${dinosaur.species} live during the ${dinosaur.when} era.`;
+    this.locationFact = `The ${dinosaur.species} could be found in ${dinosaur.where}`;
+    this.generalFact = dinosaur.fact;
+}
 // Generate Tiles for each Dino in Array
 
     // Add tiles to DOM
