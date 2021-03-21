@@ -18,8 +18,8 @@ const dinosaurs = json.Dinos.map(dinosaur => new Dinosaur(dinosaur));
 // Create Human Object and initialise and empty one
 function Human(name, height, weight, diet) {
     this.name = name;
-    this.height = parseInt(height, 10);
-    this.weight = parseInt(weight, 10);
+    this.height = height;
+    this.weight = weight;
     this.diet = diet;
 };
 
@@ -28,8 +28,8 @@ const user = new Human()
 // Use IIFE to get human data from form and edit properties of empty Human object
 (function (human) {
     human.name = document.getElementById('name').value;
-    human.height = document.getElementById('height').value;
-    human.weight = document.getElementById('weight').value;
+    human.height = parseInt(document.getElementById('height').value, 10);
+    human.weight = parseInt(document.getElementById('weight').value, 10);
     human.diet = document.getElementById('diet').value;
 })(user);
 
