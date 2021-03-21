@@ -115,7 +115,6 @@ let user = new Human();
     human.diet = document.getElementById('diet').value;
 })(user);
 
-
 // Create Dino Compare Method 1
 let compareHeight = function(dinosaur, human) {
     let heightDifference = dinosaur.height - human.height;
@@ -129,7 +128,6 @@ let compareHeight = function(dinosaur, human) {
     }
     return message;
 }
-
 
 // Create Dino Compare Method 2
 let compareWeight = function(dinosaur, human) {
@@ -145,10 +143,16 @@ let compareWeight = function(dinosaur, human) {
     return message;
 }
 
-
-
 // Create Dino Compare Method 3
-
+let compareDiet = function(dinosaur, human) {
+    let message;
+    if (dinosaur.diet === height.diet) {
+        message = `Both you and the ${dinosaur.species} are ${dinosaur.diet}s`;
+    } else {
+        message = `While you are a ${human.diet} the ${dinosaur.species} was a ${dinosaur.diet}`;
+    }
+    return message;
+}
 
 
 // Generate Tiles for each Dino in Array
